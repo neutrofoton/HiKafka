@@ -8,9 +8,11 @@ cd kafka_2.13-3.6.0
 
 # Zookeeper
 ``` bash
-# start zookeeper by passing zookeeper configuration
+# starting zookeeper by passing zookeeper configuration
 bin/zookeeper-server-start.sh config/zookeeper.properties
 
+```
+``` text
 # output
 ....
 ....
@@ -22,6 +24,7 @@ INFO binding to port 0.0.0.0/0.0.0.0:2181 (org.apache.zookeeper.server.NIOServer
 ```
 
 At the <code>config/zookeeper.properties</code> is the location zookeeper configuration.
+
 ```bash
 ....
 ....
@@ -40,8 +43,12 @@ clientPort=2181
 
 When start kafka, we need to keep zookeeper running
 ```bash
+# starting kafka serer
 bin/kafka-server-start.sh config/server.properties
 
+```
+
+``` text
 # output:
 ....
 ....

@@ -12,6 +12,9 @@ To demonstrate creating kafka topic, we can use script which shipped with kafka 
 # creating kafka a topic (called cities)
 bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic cities
 
+```
+
+``` text
 # output
 Created topic cities.
 ```
@@ -45,5 +48,25 @@ If we set the number of partion to 2, we will get <code>cities-0</code>, <code>c
 # Read Kafka Topic
 To read the list of kafka topic we can use the script shipped with kafka binary distribution
 ```bash
+# show list of available topics
 bin/kafka-topics.sh --bootstrap-server localhost:9092 --list 
+```
+
+```text
+# output
+
+cities
+```
+
+```bash
+# show detail of a topic named cities
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic cities
+```
+
+```text
+# output
+
+Topic: cities	TopicId: RzpxCFwnRFes-pwXdaVr9A	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: cities	Partition: 0	Leader: 0	Replicas: 0	Isr: 0
+
 ```
