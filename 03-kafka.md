@@ -4,9 +4,12 @@ We may have more than one Kafka cluster. Each cluster can sync data one another.
 
 <image src="images/many-kafka-cluster.png"/>  
 
+<p></p>
+
 # Running Kafka Server
 
-When start kafka, we need to keep zookeeper running
+Before starting Kafka server, we need to make sure the Zookeeper is running
+
 ```bash
 # starting kafka serer
 bin/kafka-server-start.sh config/server.properties
